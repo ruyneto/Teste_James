@@ -13,6 +13,7 @@
 		66F3C32723DBAD4C0089C650 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66F3C32523DBAD4C0089C650 /* Main.storyboard */; };
 		66F3C32923DBAD4E0089C650 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66F3C32823DBAD4E0089C650 /* Assets.xcassets */; };
 		66F3C32C23DBAD4E0089C650 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66F3C32A23DBAD4E0089C650 /* LaunchScreen.storyboard */; };
+		B0C5300330BD381F22622939 /* Pods_Teste_James.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98E672492138B29659B1A8B3 /* Pods_Teste_James.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		66F3C32823DBAD4E0089C650 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66F3C32B23DBAD4E0089C650 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66F3C32D23DBAD4E0089C650 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83A67CD61CD39960199E6130 /* Pods-Teste_James.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teste_James.debug.xcconfig"; path = "Target Support Files/Pods-Teste_James/Pods-Teste_James.debug.xcconfig"; sourceTree = "<group>"; };
+		98E672492138B29659B1A8B3 /* Pods_Teste_James.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Teste_James.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC2E2940AB84F9B4CC9C5B74 /* Pods-Teste_James.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teste_James.release.xcconfig"; path = "Target Support Files/Pods-Teste_James/Pods-Teste_James.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0C5300330BD381F22622939 /* Pods_Teste_James.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C3C330AECD78700121BB544 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				98E672492138B29659B1A8B3 /* Pods_Teste_James.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1B09B89778C651717CD3776D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				83A67CD61CD39960199E6130 /* Pods-Teste_James.debug.xcconfig */,
+				DC2E2940AB84F9B4CC9C5B74 /* Pods-Teste_James.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		66F3C31323DBAD4C0089C650 = {
 			isa = PBXGroup;
 			children = (
 				66F3C31E23DBAD4C0089C650 /* Teste_James */,
 				66F3C31D23DBAD4C0089C650 /* Products */,
+				1B09B89778C651717CD3776D /* Pods */,
+				0C3C330AECD78700121BB544 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66F3C33023DBAD4E0089C650 /* Build configuration list for PBXNativeTarget "Teste_James" */;
 			buildPhases = (
+				8DB092B0E343D5DD8629887F /* [CP] Check Pods Manifest.lock */,
 				66F3C31823DBAD4C0089C650 /* Sources */,
 				66F3C31923DBAD4C0089C650 /* Frameworks */,
 				66F3C31A23DBAD4C0089C650 /* Resources */,
+				7E7F27C2C2B2DE3ACCA0F2A4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7E7F27C2C2B2DE3ACCA0F2A4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Teste_James/Pods-Teste_James-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Teste_James/Pods-Teste_James-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Teste_James/Pods-Teste_James-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DB092B0E343D5DD8629887F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Teste_James-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		66F3C31823DBAD4C0089C650 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		66F3C33123DBAD4E0089C650 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83A67CD61CD39960199E6130 /* Pods-Teste_James.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		66F3C33223DBAD4E0089C650 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC2E2940AB84F9B4CC9C5B74 /* Pods-Teste_James.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
