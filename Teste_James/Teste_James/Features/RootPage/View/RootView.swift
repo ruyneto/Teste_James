@@ -10,11 +10,13 @@ import Foundation
 import UIKit
 
 class RootView:UIView{
+    let table = UITableView(frame: .zero)
     let label = UILabel(frame: .zero)
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadSubviews()
         loadLayout()
+        loadStyle()
     }
     
     required init?(coder: NSCoder) {
@@ -24,10 +26,14 @@ class RootView:UIView{
 
 extension RootView{
     func loadSubviews(){
-        
+        self.sv([label,table])
     }
     
     func loadLayout(){
-        
+        table.top(0).left(0).right(0).bottom(0)
+    }
+    
+    func loadStyle(){
+        self.backgroundColor = .white
     }
 }
