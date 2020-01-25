@@ -11,7 +11,7 @@ import Foundation
 struct Constants{
     static let rootUrl  = "https://api.punkapi.com/v2/"
     static let beersUrl = Constants.rootUrl+"beers"
-    static func pagination(per_page:Int,page:Int){
-        return Constants.beersUrl+"?page="+page+"&per_page="+per_page;
+    static func pagination(per_page:Int,page:Int)->String{
+        return "\(Constants.beersUrl)?page=\(page)&per_page=\(per_page)";
     }
 }

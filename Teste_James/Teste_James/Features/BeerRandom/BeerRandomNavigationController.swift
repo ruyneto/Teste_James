@@ -9,11 +9,12 @@
 import Foundation
 import UIKit
 
-class RootNavigationController:UINavigationController{
-    let rootController = RootViewController(nibName: nil, bundle: nil)
+class BeerRandomNavigationController:UINavigationController{
+    let rootController = BeerRandomViewController(nibName: nil, bundle: nil)
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nil, bundle: nil)
-        self.viewControllers = [rootController]
+        loadViewControllers()
+        loadTabBarDefinitions()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -21,7 +22,11 @@ class RootNavigationController:UINavigationController{
     }
 }
 
-extension RootNavigationController{
-    
-    
+extension BeerRandomNavigationController{
+    func loadViewControllers(){
+        self.viewControllers = [rootController]
+    }
+    func loadTabBarDefinitions(){
+        self.tabBarItem.title = "Beers"
+    }
 }
