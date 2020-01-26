@@ -11,7 +11,8 @@ import UIKit
 
 class SearchBeerView:UIView{
     let resultTableView  = UITableView()
-    let labelProcurar    = UILabel(frame: .zero)
+    var labelProcurar    : UILabel!
+    let viewModel        = SearchBeerViewModel()
     override init(frame: CGRect) {
         super.init(frame: .zero)
         loadSubviews()
@@ -26,8 +27,8 @@ class SearchBeerView:UIView{
 
 extension SearchBeerView{
     func loadSubviews(){
+        labelProcurar = viewModel.helloLabel
         self.sv([resultTableView,labelProcurar])
-        labelProcurar.text = "Olá amigo de copo, digite o nome de uma geladinha para procurarmos juntos."
     }
     func loadLayouts(){
         resultTableView.isHidden = true

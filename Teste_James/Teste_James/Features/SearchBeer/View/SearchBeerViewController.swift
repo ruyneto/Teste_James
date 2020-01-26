@@ -10,14 +10,15 @@ import Foundation
 import UIKit
 
 class SearchBeerViewController:UIViewController{
-    //let searchBeerView = SearchBeerView()
-    let searchBeerView = SearchBeerSearchingView()
+    let tableView = UITableView()
+    let searchBeerView = SearchBeerView()
     let searchBar      = UISearchBar()
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nil, bundle: nil)
         loadTitleView()
         loadViews()
         loadDelegates()
+        
     }
     
     required init?(coder: NSCoder) {
@@ -31,7 +32,9 @@ extension SearchBeerViewController{
     }
     
     func loadDelegates(){
-        self.searchBar.delegate = self
+        self.searchBar.delegate   = self
+        self.tableView.dataSource = self
+        self.tableView.delegate   = self
     }
     func loadViews(){
         self.view = searchBeerView
@@ -52,4 +55,20 @@ extension SearchBeerViewController:UISearchBarDelegate{
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         self.searchBar.resignFirstResponder()
     }
+}
+
+extension SearchBeerViewController:UITableViewDelegate{
+    
+}
+
+extension SearchBeerViewController:UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
+    
 }
