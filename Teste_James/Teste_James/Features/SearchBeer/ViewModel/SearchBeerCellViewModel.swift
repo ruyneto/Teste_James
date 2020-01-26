@@ -1,0 +1,31 @@
+//
+//  SearchBeerCellViewModel.swift
+//  Teste_James
+//
+//  Created by Ruy de Ascencão Neto on 26/01/20.
+//  Copyright © 2020 Academy. All rights reserved.
+//
+
+import Foundation
+import UIKit
+class SearchBeerCellViewModel{
+    var beer:BeerDTO!
+    var name:String{
+        return beer.name
+    }
+    
+    var image:UIImage{
+        do{
+            let url = URL(string: beer.imageURL)
+            let data = try Data(contentsOf: url!)
+            return UIImage(data: data)!
+        }
+        catch{
+            return UIImage(named: "")!
+        }
+
+    }
+    init(beer:BeerDTO){
+        self.beer = beer
+    }
+}

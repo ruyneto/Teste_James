@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Beer: Codable {
+struct BeerDTO: Codable {
     let id: Int
     let name, tagline, firstBrewed, welcomeDescription: String
     let imageURL: String

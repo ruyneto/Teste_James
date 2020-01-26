@@ -10,9 +10,12 @@ import Foundation
 import UIKit
 
 class SearchBeerViewController:UIViewController{
-    let tableView = UITableView()
+    let tableView      = SearchBeerTableView()
     let searchBeerView = SearchBeerView()
     let searchBar      = UISearchBar()
+    let searchingView  = SearchBeerSearchingView(frame: .zero)
+    let searchError    = SearchBeerNetworkErrorView(frame: .zero)
+    var data : [BeerDTO] = []
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nil, bundle: nil)
         loadTitleView()
@@ -39,7 +42,7 @@ extension SearchBeerViewController{
     func loadViews(){
         self.view = searchBeerView
     }
-    @objc func loadSearchBar(){
+    func loadSearchBar(){
         self.navigationItem.titleView = searchBar
                 self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Fechar", style: .plain, target: self, action: #selector(loadTitleView))
     }
@@ -47,13 +50,38 @@ extension SearchBeerViewController{
     @objc func loadTitleView(){
         self.navigationItem.titleView = nil
         self.navigationItem.title = "Procurar Cerveja"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Procurar", style: .plain, target: self, action: #selector(loadSearchBar))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Procurar", style: .plain, target: self, action: #selector(cancelSearchingAction))
+    }
+    
+    @objc func cancelSearchingAction(){
+        loadSearchBar()
+        self.view = searchBeerView
     }
 }
 
 extension SearchBeerViewController:UISearchBarDelegate{
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         self.searchBar.resignFirstResponder()
+        self.view = searchingView
+            BeersService.getBeersPagination(page: 1, quantity: 50){
+                data,response,error in
+                guard error == nil else{
+                    DispatchQueue.main.async {
+                        self.view = self.searchError
+                    }
+                    return
+                }
+                DispatchQueue.main.async {
+                    do{
+                        let list = try JSONDecoder().decode([BeerDTO].self, from: data!)
+                        self.data = list
+                        self.tableView.reloadData()
+                        self.view = self.tableView
+                    }catch{
+                        self.view = self.searchError
+                    }
+                }
+            }
     }
 }
 
@@ -63,11 +91,15 @@ extension SearchBeerViewController:UITableViewDelegate{
 
 extension SearchBeerViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! SearchBeerTableViewCell
+            cell.viewModel = SearchBeerCellViewModel(beer: data[indexPath.row])
+            cell.textLabel!.text = cell.viewModel.name
+            cell.imageView!.image = cell.viewModel.image
+            return cell
     }
     
     
