@@ -15,6 +15,7 @@ class SearchBeerDetailsViewController:UIViewController{
         super.init(nibName: nil, bundle: nil)
         self.beer = beer
         loadNavigation()
+        self.view = SearchBeerDetailsView()
     }
     
     required init?(coder: NSCoder) {

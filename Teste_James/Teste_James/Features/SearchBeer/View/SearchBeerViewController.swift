@@ -107,6 +107,7 @@ extension SearchBeerViewController:UITableViewDataSource{
             cell.viewModel = SearchBeerCellViewModel(beer: data[indexPath.row])
             cell.cellView.labelName.text = cell.viewModel.name
             cell.cellView.imageView.image = cell.viewModel.image
+            cell.cellView.labeltagLine.text = cell.viewModel.tagLine
             return cell
     }
     

@@ -54,8 +54,9 @@ extension SearchBeerTableViewCell{
 }
 
 class PersonalizedSquareCellView:UIView{
-    let imageView = UIImageView(frame: .zero)
-    let labelName = UILabel(frame: .zero)
+    let imageView    = UIImageView(frame: .zero)
+    let labelName    = UILabel(frame: .zero)
+    let labeltagLine = UILabel(frame:.zero)
     override init(frame: CGRect) {
         super.init(frame: .zero)
         loadSubViews()
@@ -71,14 +72,17 @@ class PersonalizedSquareCellView:UIView{
 
 extension PersonalizedSquareCellView{
     func loadSubViews(){
-        sv([imageView,labelName])
+        sv([imageView,labelName,labeltagLine])
     }
     func loadLayout(){
 
         imageView.contentMode = .scaleAspectFit
         labelName.numberOfLines = 0
-        layout(20,|-10-imageView.width(50)-20-labelName-10-|,10)
-        
+        labelName.right(10).top(10).left(70)
+        labeltagLine.right(10).bottom(10)
+        imageView.centerVertically()
+        imageView.left(10)
+        imageView.width(50).height(100)
     }
     func loadStyle(){
         height(200)

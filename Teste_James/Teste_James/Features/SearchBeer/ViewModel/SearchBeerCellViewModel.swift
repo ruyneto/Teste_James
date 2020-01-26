@@ -13,7 +13,9 @@ class SearchBeerCellViewModel{
     var name:String{
         return beer.name
     }
-    
+    var tagLine:String{
+        return beer.tagline
+    }
     var image:UIImage{
         do{
             let url = URL(string: beer.imageURL)
