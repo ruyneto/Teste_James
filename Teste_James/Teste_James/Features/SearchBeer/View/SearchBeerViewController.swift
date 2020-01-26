@@ -75,8 +75,12 @@ extension SearchBeerViewController:UISearchBarDelegate{
                     do{
                         let list = try JSONDecoder().decode([BeerDTO].self, from: data!)
                         self.data = list
-                        self.tableView.reloadData()
-                        self.view = self.tableView
+                        if(list.count>0){
+                            self.tableView.reloadData()
+                            self.view = self.tableView
+                        }else{
+                            self.view = SearchBeerNotFoundView()
+                        }
                     }catch{
                         self.view = self.searchError
                     }
@@ -87,7 +91,8 @@ extension SearchBeerViewController:UISearchBarDelegate{
 
 extension SearchBeerViewController:UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+        let choosenBeer  = SearchBeerDetailsViewController(beer: data[indexPath.row])
+        self.navigationController?.pushViewController(choosenBeer, animated: true)
     }
 }
 
