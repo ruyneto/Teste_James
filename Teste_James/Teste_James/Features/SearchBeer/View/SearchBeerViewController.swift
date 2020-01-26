@@ -63,7 +63,7 @@ extension SearchBeerViewController:UISearchBarDelegate{
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         self.searchBar.resignFirstResponder()
         self.view = searchingView
-            BeersService.getBeersPagination(page: 1, quantity: 50){
+        BeersService.getBeersByString(name: searchBar.text!){
                 data,response,error in
                 guard error == nil else{
                     DispatchQueue.main.async {
@@ -86,10 +86,13 @@ extension SearchBeerViewController:UISearchBarDelegate{
 }
 
 extension SearchBeerViewController:UITableViewDelegate{
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+    }
 }
 
 extension SearchBeerViewController:UITableViewDataSource{
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
@@ -97,8 +100,8 @@ extension SearchBeerViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! SearchBeerTableViewCell
             cell.viewModel = SearchBeerCellViewModel(beer: data[indexPath.row])
-            cell.textLabel!.text = cell.viewModel.name
-            cell.imageView!.image = cell.viewModel.image
+            cell.cellView.labelName.text = cell.viewModel.name
+            cell.cellView.imageView.image = cell.viewModel.image
             return cell
     }
     

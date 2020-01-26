@@ -15,4 +15,9 @@ struct BeersService{
         URLSession(configuration: URLSessionConfiguration.default).dataTask(with: request, completionHandler: completion).resume()
 
     }
+    static func getBeersByString(name:String,completion:@escaping (Data?,URLResponse?,Error?)->Void){
+        guard let url = URL(string: Constants.getBeerByName(name: name)) else{return}
+        let request = URLRequest(url: url)
+        URLSession(configuration: URLSessionConfiguration.default).dataTask(with: request, completionHandler: completion).resume()
+    }
 }
