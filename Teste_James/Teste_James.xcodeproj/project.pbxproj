@@ -18,6 +18,14 @@
 		66836B5A23DCA13C0094E46E /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66836B5923DCA13C0094E46E /* Beer.swift */; };
 		66836B5D23DD02560094E46E /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66836B5C23DD02560094E46E /* RootTabBarController.swift */; };
 		66836B6023DD06AE0094E46E /* SearchBeerNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66836B5F23DD06AE0094E46E /* SearchBeerNavigationController.swift */; };
+		66836B6323DD08C40094E46E /* SearchBeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66836B6223DD08C40094E46E /* SearchBeerViewController.swift */; };
+		66836B6523DD0B110094E46E /* SearchBeerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66836B6423DD0B110094E46E /* SearchBeerView.swift */; };
+		66836B6723DD2C440094E46E /* SearchBeerNotFoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66836B6623DD2C440094E46E /* SearchBeerNotFoundView.swift */; };
+		66836B6A23DD31010094E46E /* SearchBeerNotFoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66836B6923DD31010094E46E /* SearchBeerNotFoundViewModel.swift */; };
+		66836B6C23DD39070094E46E /* SearchBeerNetworkErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66836B6B23DD39070094E46E /* SearchBeerNetworkErrorView.swift */; };
+		66836B6E23DD3A310094E46E /* SearchBeerNetworkErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66836B6D23DD3A310094E46E /* SearchBeerNetworkErrorViewModel.swift */; };
+		66836B7023DD40020094E46E /* SearchBeerSearchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66836B6F23DD40020094E46E /* SearchBeerSearchingView.swift */; };
+		66836B7223DD40370094E46E /* SearchBeerSearchingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66836B7123DD40370094E46E /* SearchBeerSearchingViewModel.swift */; };
 		66F3C32023DBAD4C0089C650 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F3C31F23DBAD4C0089C650 /* AppDelegate.swift */; };
 		66F3C32223DBAD4C0089C650 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F3C32123DBAD4C0089C650 /* SceneDelegate.swift */; };
 		66F3C32423DBAD4C0089C650 /* BeerRandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F3C32323DBAD4C0089C650 /* BeerRandomViewController.swift */; };
@@ -39,6 +47,14 @@
 		66836B5923DCA13C0094E46E /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		66836B5C23DD02560094E46E /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 		66836B5F23DD06AE0094E46E /* SearchBeerNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBeerNavigationController.swift; sourceTree = "<group>"; };
+		66836B6223DD08C40094E46E /* SearchBeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBeerViewController.swift; sourceTree = "<group>"; };
+		66836B6423DD0B110094E46E /* SearchBeerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBeerView.swift; sourceTree = "<group>"; };
+		66836B6623DD2C440094E46E /* SearchBeerNotFoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBeerNotFoundView.swift; sourceTree = "<group>"; };
+		66836B6923DD31010094E46E /* SearchBeerNotFoundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBeerNotFoundViewModel.swift; sourceTree = "<group>"; };
+		66836B6B23DD39070094E46E /* SearchBeerNetworkErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBeerNetworkErrorView.swift; sourceTree = "<group>"; };
+		66836B6D23DD3A310094E46E /* SearchBeerNetworkErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBeerNetworkErrorViewModel.swift; sourceTree = "<group>"; };
+		66836B6F23DD40020094E46E /* SearchBeerSearchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBeerSearchingView.swift; sourceTree = "<group>"; };
+		66836B7123DD40370094E46E /* SearchBeerSearchingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBeerSearchingViewModel.swift; sourceTree = "<group>"; };
 		66F3C31C23DBAD4C0089C650 /* Teste_James.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Teste_James.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F3C31F23DBAD4C0089C650 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66F3C32123DBAD4C0089C650 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -166,9 +182,33 @@
 		66836B5E23DD065B0094E46E /* SearchBeer */ = {
 			isa = PBXGroup;
 			children = (
+				66836B6823DD30B80094E46E /* ViewModel */,
+				66836B6123DD08840094E46E /* View */,
 				66836B5F23DD06AE0094E46E /* SearchBeerNavigationController.swift */,
 			);
 			path = SearchBeer;
+			sourceTree = "<group>";
+		};
+		66836B6123DD08840094E46E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				66836B6423DD0B110094E46E /* SearchBeerView.swift */,
+				66836B6223DD08C40094E46E /* SearchBeerViewController.swift */,
+				66836B6623DD2C440094E46E /* SearchBeerNotFoundView.swift */,
+				66836B6B23DD39070094E46E /* SearchBeerNetworkErrorView.swift */,
+				66836B6F23DD40020094E46E /* SearchBeerSearchingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		66836B6823DD30B80094E46E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				66836B6923DD31010094E46E /* SearchBeerNotFoundViewModel.swift */,
+				66836B6D23DD3A310094E46E /* SearchBeerNetworkErrorViewModel.swift */,
+				66836B7123DD40370094E46E /* SearchBeerSearchingViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		66F3C31323DBAD4C0089C650 = {
@@ -323,15 +363,23 @@
 				66836B5D23DD02560094E46E /* RootTabBarController.swift in Sources */,
 				66836B4D23DBEB140094E46E /* BeerRandomCollectionViewCell.swift in Sources */,
 				66836B4323DBBEA40094E46E /* BeerRandomNavigationController.swift in Sources */,
+				66836B6C23DD39070094E46E /* SearchBeerNetworkErrorView.swift in Sources */,
 				66F3C32023DBAD4C0089C650 /* AppDelegate.swift in Sources */,
 				66836B6023DD06AE0094E46E /* SearchBeerNavigationController.swift in Sources */,
+				66836B6323DD08C40094E46E /* SearchBeerViewController.swift in Sources */,
 				66836B5823DC962A0094E46E /* Erros.swift in Sources */,
 				66836B4F23DC86CF0094E46E /* BeerCellViewModel.swift in Sources */,
+				66836B6A23DD31010094E46E /* SearchBeerNotFoundViewModel.swift in Sources */,
+				66836B7223DD40370094E46E /* SearchBeerSearchingViewModel.swift in Sources */,
+				66836B6723DD2C440094E46E /* SearchBeerNotFoundView.swift in Sources */,
+				66836B6E23DD3A310094E46E /* SearchBeerNetworkErrorViewModel.swift in Sources */,
 				66F3C32223DBAD4C0089C650 /* SceneDelegate.swift in Sources */,
 				66836B5A23DCA13C0094E46E /* Beer.swift in Sources */,
 				66836B4B23DBD58B0094E46E /* RootViewModel.swift in Sources */,
 				66836B5623DC95700094E46E /* BeersService.swift in Sources */,
 				66836B4923DBC4BE0094E46E /* BeerRandomView.swift in Sources */,
+				66836B7023DD40020094E46E /* SearchBeerSearchingView.swift in Sources */,
+				66836B6523DD0B110094E46E /* SearchBeerView.swift in Sources */,
 				66836B5323DC907C0094E46E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

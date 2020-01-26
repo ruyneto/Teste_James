@@ -14,6 +14,7 @@ class SearchBeerNavigationController:UINavigationController{
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nil, bundle: nil)
         loadTabBarDefinition()
+        loadChildViewControllers()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -25,5 +26,9 @@ class SearchBeerNavigationController:UINavigationController{
 extension SearchBeerNavigationController{
     func loadTabBarDefinition(){
         self.tabBarItem.title = "Procurar"
+    }
+    
+    func loadChildViewControllers(){
+        self.viewControllers = [SearchBeerViewController()]
     }
 }
