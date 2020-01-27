@@ -33,6 +33,8 @@
 		66836B7E23DE25CE0094E46E /* SearchBeerDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66836B7D23DE25CE0094E46E /* SearchBeerDetailsView.swift */; };
 		66836B8423DE719F0094E46E /* IngredientHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66836B8323DE719F0094E46E /* IngredientHeader.swift */; };
 		66836B8723DE72790094E46E /* IngredientHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66836B8623DE72790094E46E /* IngredientHeaderViewModel.swift */; };
+		66836B8923DE789C0094E46E /* IngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66836B8823DE789C0094E46E /* IngredientCell.swift */; };
+		66836B8B23DE79EE0094E46E /* IngredientCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66836B8A23DE79EE0094E46E /* IngredientCellViewModel.swift */; };
 		66F3C32023DBAD4C0089C650 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F3C31F23DBAD4C0089C650 /* AppDelegate.swift */; };
 		66F3C32223DBAD4C0089C650 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F3C32123DBAD4C0089C650 /* SceneDelegate.swift */; };
 		66F3C32423DBAD4C0089C650 /* BeerRandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F3C32323DBAD4C0089C650 /* BeerRandomViewController.swift */; };
@@ -69,6 +71,8 @@
 		66836B7D23DE25CE0094E46E /* SearchBeerDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBeerDetailsView.swift; sourceTree = "<group>"; };
 		66836B8323DE719F0094E46E /* IngredientHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientHeader.swift; sourceTree = "<group>"; };
 		66836B8623DE72790094E46E /* IngredientHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientHeaderViewModel.swift; sourceTree = "<group>"; };
+		66836B8823DE789C0094E46E /* IngredientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientCell.swift; sourceTree = "<group>"; };
+		66836B8A23DE79EE0094E46E /* IngredientCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientCellViewModel.swift; sourceTree = "<group>"; };
 		66F3C31C23DBAD4C0089C650 /* Teste_James.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Teste_James.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F3C31F23DBAD4C0089C650 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66F3C32123DBAD4C0089C650 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -260,6 +264,7 @@
 			children = (
 				66836B8523DE720D0094E46E /* ViewModel */,
 				66836B8323DE719F0094E46E /* IngredientHeader.swift */,
+				66836B8823DE789C0094E46E /* IngredientCell.swift */,
 			);
 			path = "Cell+Header";
 			sourceTree = "<group>";
@@ -268,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				66836B8623DE72790094E46E /* IngredientHeaderViewModel.swift */,
+				66836B8A23DE79EE0094E46E /* IngredientCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -433,6 +439,7 @@
 				66836B5823DC962A0094E46E /* Erros.swift in Sources */,
 				66836B4F23DC86CF0094E46E /* BeerCellViewModel.swift in Sources */,
 				66836B6A23DD31010094E46E /* SearchBeerNotFoundViewModel.swift in Sources */,
+				66836B8B23DE79EE0094E46E /* IngredientCellViewModel.swift in Sources */,
 				66836B7223DD40370094E46E /* SearchBeerSearchingViewModel.swift in Sources */,
 				66836B6723DD2C440094E46E /* SearchBeerNotFoundView.swift in Sources */,
 				66836B6E23DD3A310094E46E /* SearchBeerNetworkErrorViewModel.swift in Sources */,
@@ -446,6 +453,7 @@
 				66836B7023DD40020094E46E /* SearchBeerSearchingView.swift in Sources */,
 				66836B6523DD0B110094E46E /* SearchBeerView.swift in Sources */,
 				66836B5323DC907C0094E46E /* Constants.swift in Sources */,
+				66836B8923DE789C0094E46E /* IngredientCell.swift in Sources */,
 				66836B7B23DE20120094E46E /* SearchBeerDetailsViewController.swift in Sources */,
 				66836B7423DD454F0094E46E /* SearchBeerViewModel.swift in Sources */,
 				66836B7823DD6A9F0094E46E /* SearchBeerCellViewModel.swift in Sources */,

@@ -30,8 +30,9 @@ extension IngredientHeader{
         sv([labelName])
     }
     func loadLayout(){
-        labelName.centerInContainer()
         height(50)
+        labelName.left(10)
+        labelName.centerVertically()
     }
     func loadStyle(){
         backgroundColor = #colorLiteral(red: 1, green: 0.6623769441, blue: 0.4834560986, alpha: 1)

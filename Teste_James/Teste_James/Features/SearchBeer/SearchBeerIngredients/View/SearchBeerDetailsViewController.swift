@@ -65,14 +65,14 @@ extension SearchBeerDetailsViewController:UITableViewDataSource{
         }
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "")
+        let cell:IngredientCell = tableView.dequeueReusableCell(withIdentifier: "cell") as! IngredientCell 
         switch(indexPath.section){
             case 0:
-                 cell.textLabel!.text = self.hops[indexPath.row].name
+                cell.view.labelName!.text = self.hops[indexPath.row].name
             case 1:
-                 cell.textLabel!.text = self.malt[indexPath.row].name
+                 cell.view.labelName!.text = self.malt[indexPath.row].name
             default:
-                cell.textLabel!.text  = self.beer.ingredients.yeast
+                cell.view.labelName!.text  = self.beer.ingredients.yeast
         }
         return cell
     }

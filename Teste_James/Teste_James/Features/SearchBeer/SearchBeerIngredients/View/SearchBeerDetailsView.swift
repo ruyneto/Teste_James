@@ -12,6 +12,7 @@ import UIKit
 class SearchBeerIngredientsView:UITableView{
     init(){
         super.init(frame: .zero, style: .plain)
+        register(IngredientCell.self, forCellReuseIdentifier: "cell")
         loadSubviews()
         loadLayout()
         loadStyle()
@@ -29,6 +30,8 @@ extension SearchBeerIngredientsView{
         self.backgroundColor = .white
     }
     func loadLayout(){
-
+        separatorStyle = .none
+    
+        allowsSelection = false
     }
 }

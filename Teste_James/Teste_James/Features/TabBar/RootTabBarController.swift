@@ -16,7 +16,7 @@ class RootTabBarController:UITabBarController{
     }
     
     func setChildren(){
-        self.viewControllers = [BeerRandomNavigationController(nibName: nil, bundle: nil),SearchBeerNavigationController(nibName: nil, bundle: nil)]
+        self.viewControllers = [SearchBeerNavigationController(nibName: nil, bundle: nil),BeerRandomNavigationController(nibName: nil, bundle: nil)]
     }
     
     required init?(coder: NSCoder) {
