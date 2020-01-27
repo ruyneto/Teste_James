@@ -18,7 +18,7 @@ class SearchBeerSearchingViewModel{
     }
     var label:UILabel{
         let label  = UILabel(frame: .zero)
-        label.text = "Pesquisando o nome..."
+        label.text = "Pesquisando..."
         label.numberOfLines = 0
         label.textAlignment = .center
         return label

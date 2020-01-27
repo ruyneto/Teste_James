@@ -28,5 +28,6 @@ extension BeerRandomNavigationController{
     }
     func loadTabBarDefinitions(){
         self.tabBarItem.title = "Beers"
+         self.tabBarItem.image = UIImage(named: "cup")
     }
 }

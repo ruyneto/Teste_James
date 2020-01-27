@@ -35,5 +35,8 @@ extension BeerRandomView{
     
     func loadStyle(){
         self.collection.backgroundColor = .white
+        if let flowLayout = collection.collectionViewLayout as? UICollectionViewFlowLayout {
+            flowLayout.scrollDirection = .horizontal
+        }
     }
 }

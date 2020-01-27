@@ -26,6 +26,7 @@ class SearchBeerNavigationController:UINavigationController{
 extension SearchBeerNavigationController{
     func loadTabBarDefinition(){
         self.tabBarItem.title = "Procurar"
+         self.tabBarItem.image = UIImage(named: "search")
     }
     
     func loadChildViewControllers(){

@@ -10,5 +10,5 @@ import Foundation
 
 
 class RootViewModel{
-    let title = "Inicio"
+    let title = "Cervejas do dia"
 }

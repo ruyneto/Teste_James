@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 
 class BeerRandomCollectionViewCell:UICollectionViewCell{
-    let nameBeer = UILabel(frame: .zero)
-
+    let nameBeer  = UILabel(frame: .zero)
+    let imageView = UIImageView(frame: .zero)
     override init(frame: CGRect) {
         super.init(frame: .zero)
         loadSubView()
@@ -25,16 +25,21 @@ class BeerRandomCollectionViewCell:UICollectionViewCell{
 
 extension BeerRandomCollectionViewCell{
     func loadSubView(){
-        sv([nameBeer])
+        sv([imageView,nameBeer])
     }
     
     func loadLayout(){
-        nameBeer.centerInContainer()
+        
+        nameBeer.numberOfLines = 0
+        nameBeer.top(10).left(10).right(10)
+        imageView.centerInContainer()
+        imageView.width(100).height(200)
+        imageView.contentMode = .scaleAspectFit
     }
     
     func loadStyle(){
-        self.backgroundColor = .red
-        self.nameBeer.centerInContainer()
+        self.backgroundColor = #colorLiteral(red: 1, green: 0.8379230929, blue: 0.6590386772, alpha: 1)
+        layer.cornerRadius = 10
     }
     
 }
