@@ -9,11 +9,11 @@
 import Foundation
 import UIKit
 
-class SearchBeerDetailsView:UIView{
-    let buttonIngredients = UIButton(frame: .zero)
-    override init(frame: CGRect) {
-        super.init(frame: .zero)
+class SearchBeerIngredientsView:UITableView{
+    init(){
+        super.init(frame: .zero, style: .plain)
         loadSubviews()
+        loadLayout()
         loadStyle()
     }
     
@@ -22,8 +22,13 @@ class SearchBeerDetailsView:UIView{
     }
 }
 
-extension SearchBeerDetailsView{
+extension SearchBeerIngredientsView{
+    func loadSubviews(){
+    }
     func loadStyle(){
         self.backgroundColor = .white
+    }
+    func loadLayout(){
+
     }
 }
