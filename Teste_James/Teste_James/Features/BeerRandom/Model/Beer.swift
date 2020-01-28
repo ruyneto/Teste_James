@@ -9,8 +9,8 @@
 import Foundation
 
 struct BeerDTO: Codable {
-    let id: Int?
-    let name, tagline, firstBrewed, welcomeDescription: String?
+    let id: Int
+    let name, tagline, firstBrewed, welcomeDescription: String
     let imageURL: String?
     let abv: Double?
     let ibu: Double?

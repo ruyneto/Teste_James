@@ -11,10 +11,10 @@ import UIKit
 class SearchBeerCellViewModel{
     var beer:BeerDTO!
     var name:String{
-        return beer.name!
+        return beer.name
     }
     var tagLine:String{
-        return beer.tagline!
+        return beer.tagline
     }
     var image:UIImage{
         do{
