@@ -9,22 +9,22 @@
 import Foundation
 
 struct BeerDTO: Codable {
-    let id: Int
-    let name, tagline, firstBrewed, welcomeDescription: String
-    let imageURL: String
-    let abv: Double
+    let id: Int?
+    let name, tagline, firstBrewed, welcomeDescription: String?
+    let imageURL: String?
+    let abv: Double?
     let ibu: Double?
-    let targetFg: Int
-    let targetOg: Double
+    let targetFg: Int?
+    let targetOg: Double?
     let ebc: Int?
     let srm, ph: Double?
-    let attenuationLevel: Double
-    let volume, boilVolume: BoilVolume
-    let method: Method
-    let ingredients: Ingredients
-    let foodPairing: [String]
-    let brewersTips: String
-    let contributedBy: ContributedBy
+    let attenuationLevel: Double?
+    let volume, boilVolume: BoilVolume?
+    let method: Method?
+    let ingredients: Ingredients?
+    let foodPairing: [String]?
+    let brewersTips: String?
+    let contributedBy: ContributedBy?
 
     enum CodingKeys: String, CodingKey {
         case id, name, tagline

@@ -18,8 +18,8 @@ class SearchBeerDetailsViewController:UIViewController{
         super.init(nibName: nil, bundle: nil)
         self.beer = beer
         self.view = tableView
-        self.hops = beer.ingredients.hops
-        self.malt = beer.ingredients.malt
+        self.hops = beer.ingredients?.hops
+        self.malt = beer.ingredients?.malt
         self.tableView.delegate = self
         self.tableView.dataSource = self
         loadNavigation()
@@ -72,7 +72,7 @@ extension SearchBeerDetailsViewController:UITableViewDataSource{
             case 1:
                  cell.view.labelName!.text = self.malt[indexPath.row].name
             default:
-                cell.view.labelName!.text  = self.beer.ingredients.yeast
+                cell.view.labelName!.text  = self.beer.ingredients?.yeast
         }
         return cell
     }

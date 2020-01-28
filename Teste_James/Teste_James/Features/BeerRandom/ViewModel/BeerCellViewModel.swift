@@ -11,14 +11,14 @@ import UIKit
 class BeerCellViewModel{
     var beer:BeerDTO?
     var name:String{
-        return beer!.name
+        return beer!.name!
     }
     var tagLine:String{
-        return beer!.tagline
+        return beer!.tagline!
     }
     var image:UIImage{
         do{
-            let url = URL(string: beer!.imageURL)
+            let url = URL(string: beer!.imageURL!)
             let data = try Data(contentsOf: url!)
             return UIImage(data: data)!
         }
