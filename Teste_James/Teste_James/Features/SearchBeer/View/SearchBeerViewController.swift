@@ -21,7 +21,9 @@ class SearchBeerViewController:UIViewController{
         loadTitleView()
         loadViews()
         loadDelegates()
-        
+        searchBar.searchTextField.isAccessibilityElement = true
+        searchBar.searchTextField.accessibilityIdentifier = "st"
+        searchBar.searchTextField.accessibilityLabel = "st"
     }
     
     required init?(coder: NSCoder) {

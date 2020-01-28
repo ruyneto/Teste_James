@@ -14,7 +14,7 @@ class Test_SearchBeerCellViewModel: XCTestCase {
     let tagLane  = "Tokyo tagline"
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        let beer  = BeerDTO(id: 1, name: nameBeer, tagline: "Tokyo tagline", firstBrewed: nil, welcomeDescription: nil, imageURL: "https://www.hostgator.com.br/blog/wp-content/uploads/2018/04/teste-ab-e-por-que-comecar-a-usar-blog.png", abv: nil, ibu: nil, targetFg: nil, targetOg: nil, ebc: nil, srm: nil, ph: nil, attenuationLevel: nil, volume: nil, boilVolume: nil, method: nil, ingredients: nil, foodPairing: nil, brewersTips: nil, contributedBy: nil)
+        let beer  = BeerDTO(id: 1, name: nameBeer, tagline: "Tokyo tagline", firstBrewed:"1948", welcomeDescription: "Ola mundo", imageURL: "https://www.hostgator.com.br/blog/wp-content/uploads/2018/04/teste-ab-e-por-que-comecar-a-usar-blog.png", abv: nil, ibu: nil, targetFg: nil, targetOg: nil, ebc: nil, srm: nil, ph: nil, attenuationLevel: nil, volume: nil, boilVolume: nil, method: nil, ingredients: nil, foodPairing: nil, brewersTips: nil, contributedBy: nil)
         viewModel = SearchBeerCellViewModel(beer: beer)
     }
 
